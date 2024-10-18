@@ -1,1 +1,1 @@
-print("Liza the best!!!!!")
+print("Liza the best!!")
