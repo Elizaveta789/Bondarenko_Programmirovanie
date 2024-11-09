@@ -6,7 +6,7 @@ while type(A) != int:  # проверка на тип переменной
     except ValueError:
         print("Неправильно ввели")
         A = input("Введите число - ")
-if A % 2 == 0:
+if A % 2 == 0:  # ищем чему равен остаток
     d = False
 else:
     d = True
