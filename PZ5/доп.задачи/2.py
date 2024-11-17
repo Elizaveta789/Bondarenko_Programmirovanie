@@ -1,13 +1,10 @@
-a = int(input())
-
-def all_summ(a):
-    count = 0
-    digit_sum = 0
-    while a != 0:
-        count += 1
-        digit_sum += a % 10
-        a //= 10
-        if digit_sum == 0:
-            break
-    return count
-print(all_summ(a))
+#Рассчитать и вывести периметр и площадь прямоугольника.
+#Расчеты оформить в функции
+a = int(input('Введите высоту прямоугольника(см) - '))
+b = int(input('Введите ширину прямоугольника(см) - '))
+def S_P_pryamougol(a,b):
+    Pmetr = (a + b) * 2
+    SQuare = a * b
+    return Pmetr, SQuare
+P, S = S_P_pryamougol(a,b)
+print(f'Периметр этого прямоугольника равен: {P}\nПлощадь этого прямоугольника: {S}')
