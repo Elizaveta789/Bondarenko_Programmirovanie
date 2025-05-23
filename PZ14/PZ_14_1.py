@@ -1,7 +1,7 @@
 import re
 
-with open("writer.txt", encoding="utf-8") as f:
-    text = f.read()
+with open("writer.txt", encoding="utf-8") as file:
+    text = file.read()
 
 
 lines = list(filter(None, text.split('\n')))
@@ -32,10 +32,10 @@ def every_line(line):
 
 all_works = works_p.findall(text)
 
-writers_data = list(filter(None, map(every_line, lines)))
+all_inf = list(filter(None, map(every_line, lines)))
 
 
-for writer in writers_data:
+for writer in all_inf:
     works_str = ', '.join(writer['works']) if writer['works'] else 'произведения не указаны'
     print(f"{writer['name']} ({writer['birth']}-{writer['death']}): {works_str}")
 
